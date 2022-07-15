@@ -1,6 +1,4 @@
 #include "ft_printf.h"
-# include <stdarg.h>
-#include <unistd.h>
 
 int	ft_printchar(int c)
 {
@@ -14,7 +12,11 @@ int	ft_formats(va_list args, const char format)
 
 	print_length = 0;
 	if (format == 'c')
-		print_length += ft_printchar(va_args(args, int));
+		print_length += ft_printchar(va_arg(args, int));
+	else if (format == 's')
+		print_length += ft_printstr(va_arg(args, char *));
+	else if (format == 'p')
+		print_length += ft_printptr(va_arg(args, unsigned long long));
 	return (print_length);
 }
 
@@ -42,7 +44,12 @@ int	ft_printf(const char *str, ...)
 	return (print_length);
 }
 
-int main(void)
-{
-	ft_printf("%c", 'A');
-}
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//    int a = 10;
+//    int *b = &a;
+//    ft_printf("%p\n", b);
+//	printf("%p", b);
+//}
