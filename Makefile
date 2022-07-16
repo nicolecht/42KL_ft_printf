@@ -6,7 +6,7 @@
 #    By: nchee <nchee@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 16:30:03 by nchee             #+#    #+#              #
-#    Updated: 2022/07/16 14:16:47 by nchee            ###   ########.fr        #
+#    Updated: 2022/07/16 17:38:18 by nchee            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ RM			= rm -f
 DEF_COLOR	= \033[0;39m
 GREEN		= \033[0;92m
 
-SRCS		= ft_printf.c ft_printstr.c ft_printptr.c
+SRCS		= ft_printf.c ft_printstr.c ft_printptr.c ft_printnbr.c \
+				ft_printunsigned.c ft_printhex.c ft_printpercent.c
 
 OBJS		= $(SRCS:.c=.o)
 

@@ -17,6 +17,14 @@ int	ft_formats(va_list args, const char format)
 		print_length += ft_printstr(va_arg(args, char *));
 	else if (format == 'p')
 		print_length += ft_printptr(va_arg(args, unsigned long long));
+	else if (format == 'd' || format == 'i')
+		print_length += ft_printnbr(va_arg(args, int));
+	else if (format == 'u')
+		print_length += ft_printunsigned(va_arg(args, unsigned int));
+	else if (format == 'x' || format == 'X')
+		print_length += ft_printhex(va_arg(args, unsigned int), format);
+	else if (format == '%')
+		print_length += ft_printpercent();
 	return (print_length);
 }
 
@@ -48,8 +56,8 @@ int	ft_printf(const char *str, ...)
 //
 //int main(void)
 //{
-//    int a = 10;
-//    int *b = &a;
-//    ft_printf("%p\n", b);
-//	printf("%p", b);
+//	//char a = '%';
+//    //int *b = &a;
+//    ft_printf(" \"Books % OR % apparels\"");
+//	printf(" \"Books % OR % apparels\"");
 //}
