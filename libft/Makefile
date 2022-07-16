@@ -6,14 +6,14 @@
 #    By: nchee <nchee@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/11 14:23:15 by nchee             #+#    #+#              #
-#    Updated: 2022/07/13 17:54:18 by nchee            ###   ########.fr        #
+#    Updated: 2022/07/16 14:16:49 by nchee            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
-INCLUDE	= libft.h
+INCLUDES= ../include
 CC		= gcc
-CFLAGS	= -Wall -Wextra -Werror -Ilibft.h
+CFLAGS	= -Wall -Wextra -Werror -I
 LIB1	= ar -rcs
 RM		= rm -f
 
@@ -48,7 +48,7 @@ bonus:		$(NAME) $(BONUS_OBJS)
 			$(LIB1) $(NAME) $(BONUS_OBJS)
 
 .c.o:
-			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+			$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $(<:.c=.o)
 
 clean:
 			$(RM) $(OBJS) $(BONUS_OBJS)

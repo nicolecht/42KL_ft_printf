@@ -1,10 +1,5 @@
 #include "ft_printf.h"
-//#include "libft.h"
-
-void	ft_putchar_fd(char c, int fd) // exclude this after making library properly
-{
-	write(fd, &c, 1);
-}
+#include "libft.h"
 
 int	ft_ptrlen(uintptr_t num)
 {
