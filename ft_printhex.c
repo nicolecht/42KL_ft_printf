@@ -15,7 +15,7 @@ int	ft_hexlen(unsigned int num)
 
 void	ft_puthex(unsigned int num, const char format)
 {
-	if (num > 16)
+	if (num >= 16)
 	{
 		ft_puthex(num / 16, format);
 		ft_puthex(num % 16, format);

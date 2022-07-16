@@ -1,5 +1,4 @@
 #include "ft_printf.h"
-#include "libft.h"
 
 int	ft_ptrlen(uintptr_t num)
 {
