@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nchee <nchee@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/18 14:04:16 by nchee             #+#    #+#             */
+/*   Updated: 2022/07/18 15:03:48 by nchee            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	ft_printchar(int c)
@@ -30,9 +42,9 @@ int	ft_formats(va_list args, const char format)
 
 int	ft_printf(const char *str, ...)
 {
-	int	i;
-	va_list args;
-	int	print_length;
+	va_list	args;
+	int		i;
+	int		print_length;
 
 	i = 0;
 	print_length = 0;
@@ -51,13 +63,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (print_length);
 }
-
-//#include <stdio.h>
-//
-//int main(void)
-//{
-//	//char a = '%';
-//    //int *b = &a;
-//    ft_printf(" \"Books % OR % apparels\"");
-//	printf(" \"Books % OR % apparels\"");
-//}

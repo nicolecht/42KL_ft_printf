@@ -6,12 +6,12 @@
 /*   By: nchee <nchee@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:06:39 by nchee             #+#    #+#             */
-/*   Updated: 2022/07/16 17:50:16 by nchee            ###   ########.fr       */
+/*   Updated: 2022/07/18 14:10:01 by nchee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
-#define FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <unistd.h>
@@ -31,9 +31,9 @@ int		ft_printnbr(int n);
 int		ft_printunsigned(unsigned int n);
 char	*ft_utioa(unsigned int n);
 int		ft_numlen(unsigned int n);
-int	ft_printhex(unsigned int num, const char format);
+int		ft_printhex(unsigned int num, const char format);
 void	ft_puthex(unsigned int num, const char format);
-int	ft_hexlen(unsigned int num);
-int	ft_printpercent(void);
+int		ft_hexlen(unsigned int num);
+int		ft_printpercent(void);
 
 #endif
