@@ -6,14 +6,14 @@
 #    By: nchee <nchee@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 16:30:03 by nchee             #+#    #+#              #
-#    Updated: 2022/07/18 14:21:55 by nchee            ###   ########.fr        #
+#    Updated: 2022/07/18 20:46:42 by nchee            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libftprintf.a
 INCLUDES	= include
 LIBFT		= libft
-MAIN_DIR	= /Users/nchee/42KL_Core_ft_printf_Personal
+MAIN_DIR	= $(shell pwd)
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror -I
 AR			= ar -rcs
