@@ -1,4 +1,4 @@
-# 42KL_ft_printf
+# 42_ft_printf
 
 Rank 1 project for 42 Core Programme.
 
